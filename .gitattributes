@@ -198,11 +198,6 @@ src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/ZipFile.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/ZipFolder.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/ZipItem.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/ZipItemType.java -text
-src/main/resources/org/gcube/portlets/user/homelibrary/util/ExtensionToMimeTypeMap.properties -text
-src/main/resources/org/gcube/portlets/user/homelibrary/util/MimeTypeToExtensionMap.properties -text
-src/main/resources/org/gcube/portlets/user/homelibrary/util/config/easyconf/unittest.properties -text
-src/main/resources/org/gcube/portlets/user/homelibrary/util/config/homelibrary.properties -text
-src/main/resources/org/gcube/portlets/user/homelibrary/util/encryption/SecretKey.ser -text
 src/test/java/org/gcube/common/homelibrary/consistency/CheckException.java -text
 src/test/java/org/gcube/common/homelibrary/consistency/CheckerUtil.java -text
 src/test/java/org/gcube/common/homelibrary/consistency/HomeLibraryConsistencyChecker.java -text
