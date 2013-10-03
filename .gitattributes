@@ -123,6 +123,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalP
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalResourceLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalUrl.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/File.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/GCubeItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Image.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/PDF.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Query.java -text
