@@ -166,10 +166,6 @@ src/main/java/org/gcube/common/homelibrary/util/Util.java -text
 src/main/java/org/gcube/common/homelibrary/util/WorkspaceTreeVisitor.java -text
 src/main/java/org/gcube/common/homelibrary/util/WorkspaceTypes.java -text
 src/main/java/org/gcube/common/homelibrary/util/WorkspaceUtil.java -text
-src/main/java/org/gcube/common/homelibrary/util/accesslog/AccessLogProducer.java -text
-src/main/java/org/gcube/common/homelibrary/util/accesslog/AccessLogUtil.java -text
-src/main/java/org/gcube/common/homelibrary/util/accesslog/HLAccessLogEntry.java -text
-src/main/java/org/gcube/common/homelibrary/util/accesslog/HLAccessLogEntryType.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/HomeLibraryConfiguration.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/AggregatedProperties.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/ClasspathUtil.java -text
@@ -185,8 +181,6 @@ src/main/java/org/gcube/common/homelibrary/util/config/easyconf/FileConfiguratio
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/Filter.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/JndiURL.java -text
 src/main/java/org/gcube/common/homelibrary/util/encryption/EncryptionUtil.java -text
-src/main/java/org/gcube/common/homelibrary/util/logging/LoggingUtil.java -text
-src/main/java/org/gcube/common/homelibrary/util/logging/MultiLoggerFileAppender.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/UnzipUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/WorkspaceToZipModelConverter.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipFileModelExtractor.java -text
