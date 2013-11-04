@@ -181,8 +181,6 @@ src/main/java/org/gcube/common/homelibrary/util/config/easyconf/FileConfiguratio
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/Filter.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/JndiURL.java -text
 src/main/java/org/gcube/common/homelibrary/util/encryption/EncryptionUtil.java -text
-src/main/java/org/gcube/common/homelibrary/util/logging/LoggingUtil.java -text
-src/main/java/org/gcube/common/homelibrary/util/logging/MultiLoggerFileAppender.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/UnzipUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/WorkspaceToZipModelConverter.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipFileModelExtractor.java -text
