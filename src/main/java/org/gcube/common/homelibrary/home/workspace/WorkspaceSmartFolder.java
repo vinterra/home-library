@@ -117,5 +117,7 @@ public interface WorkspaceSmartFolder {
 	 * @throws InsufficientPrivilegesException if the user don't have sufficient privileges to perform this operation.
 	 */
 	public void remove() throws InternalErrorException, InsufficientPrivilegesException;
+
+
 	
 }
