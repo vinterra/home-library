@@ -150,6 +150,8 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/lin
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/link/PDFDocumentLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeries.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeriesInfo.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/groups/Group.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/groups/GroupsManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolderItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchItem.java -text
