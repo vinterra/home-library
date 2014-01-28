@@ -73,6 +73,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemAction.ja
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSharedFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSmartFolder.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/accessmanager/AccessManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntry.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryAdd.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryCreate.java -text
@@ -150,13 +151,13 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/lin
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/link/PDFDocumentLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeries.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeriesInfo.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/groups/Group.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/groups/GroupsManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolderItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/sharing/WorkspaceMessage.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/sharing/WorkspaceMessageManager.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/usermanager/GCubeGroup.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/usermanager/UserManager.java -text
 src/main/java/org/gcube/common/homelibrary/util/Extensions.java -text
 src/main/java/org/gcube/common/homelibrary/util/FileSystemNameUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/HomeFolderVisitor.java -text
