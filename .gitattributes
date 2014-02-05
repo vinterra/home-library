@@ -73,6 +73,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemAction.ja
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSharedFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSmartFolder.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/accessmanager/ACLType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accessmanager/AccessManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntry.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryAdd.java -text
@@ -151,6 +152,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/lin
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/link/PDFDocumentLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeries.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeriesInfo.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/privilegemanager/PrivilegeManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolderItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchItem.java -text
