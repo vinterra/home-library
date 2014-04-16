@@ -153,10 +153,10 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/gcube/lin
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeries.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeriesInfo.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/privilegemanager/PrivilegeManager.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/search/AdvancedSearchItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchFolderItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchItem.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/search/SearchItemByOperator.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/sharing/WorkspaceMessage.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/sharing/WorkspaceMessageManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/trash/WorkspaceTrashFolder.java -text
