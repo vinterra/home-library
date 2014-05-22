@@ -98,6 +98,7 @@ public class ZipFileModelExtractor {
 		return assignParents();
 	}
 
+	
 	protected List<ZipItem> assignParents()
 	{
 		List<ZipItem> rootsElements = new LinkedList<ZipItem>();
@@ -114,7 +115,6 @@ public class ZipFileModelExtractor {
 			ZipItem item = entry.getValue();
 
 			logger.trace("Elaborating "+item.getName());
-
 			File f = new File(entry.getKey());
 			String parentPath = f.getParent();
 			logger.trace("ParentPath: "+parentPath);
@@ -130,7 +130,6 @@ public class ZipFileModelExtractor {
 						folderParent.addChild(item);
 
 						logger.trace("Added "+item.getName()+" to "+folderParent.getName());
-
 					}
 
 				}else{

@@ -161,6 +161,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/sharing/WorkspaceMessa
 src/main/java/org/gcube/common/homelibrary/home/workspace/sharing/WorkspaceMessageManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/trash/WorkspaceTrashFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/trash/WorkspaceTrashItem.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/trash/WorkspaceTrashItemProperties.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/usermanager/GCubeGroup.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/usermanager/UserManager.java -text
 src/main/java/org/gcube/common/homelibrary/util/Extensions.java -text
@@ -189,6 +190,7 @@ src/main/java/org/gcube/common/homelibrary/util/config/easyconf/FileConfiguratio
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/Filter.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/JndiURL.java -text
 src/main/java/org/gcube/common/homelibrary/util/encryption/EncryptionUtil.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ExtractAllFiles.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/UnzipUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/WorkspaceToZipModelConverter.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipFileModelExtractor.java -text
