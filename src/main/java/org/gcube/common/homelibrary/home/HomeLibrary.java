@@ -200,7 +200,7 @@ public class HomeLibrary {
 		HomeManagerFactory homeManagerFactory = getHomeManagerFactory();
 
 		HomeManager homeManager = homeManagerFactory.getHomeManager();
-
+		
 		User user = homeManager.getUser(username);
 
 		Home home = homeManager.getHome(user);
