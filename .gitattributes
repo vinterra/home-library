@@ -73,6 +73,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemAction.ja
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSharedFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSmartFolder.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceVREFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accessmanager/ACLType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accessmanager/AccessManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntry.java -text
