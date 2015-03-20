@@ -69,7 +69,6 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/Properties.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/Workspace.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItem.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemAction.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItemType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSharedFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSmartFolder.java -text
