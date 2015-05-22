@@ -116,11 +116,9 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/exceptions/WrongParent
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/FolderBulkCreator.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/FolderBulkCreatorManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/FolderItem.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/AquaMapsItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalFile.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalImage.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalPDFFile.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalResourceLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ExternalUrl.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/File.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/GCubeItem.java -text
@@ -130,10 +128,7 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Query.jav
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/QueryType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Report.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ReportTemplate.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/TabularDataLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Url.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/WorkflowReport.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/WorkflowTemplate.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeries.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeriesInfo.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/privilegemanager/PrivilegeManager.java -text
@@ -176,8 +171,13 @@ src/main/java/org/gcube/common/homelibrary/util/config/easyconf/FileConfiguratio
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/Filter.java -text
 src/main/java/org/gcube/common/homelibrary/util/config/easyconf/JndiURL.java -text
 src/main/java/org/gcube/common/homelibrary/util/encryption/EncryptionUtil.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ExtractAllFiles.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/UnzipUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/WorkspaceToZipModelConverter.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ZipFileModelExtractor.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ZipModelToWorkspaceCreator.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ZipModelVisitor.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ZipModelWriter.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/AbstractZipItem.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/ZipFile.java -text
