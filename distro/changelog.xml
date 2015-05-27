@@ -102,4 +102,8 @@
 		<Change>getACL() methods moved to Abstract Folder
 		</Change>
 	</Changeset>
+		<Changeset component="org.gcube.common.home-library.1-7-1"
+		date="2015-05-15">
+		<Change>Fixed bug creating a new VRE folder</Change>
+	</Changeset>
 </ReleaseNotes>
