@@ -82,7 +82,6 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingE
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRemoval.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRenaming.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryShare.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryType.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryUnshare.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryUpdate.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/acl/Capabilities.java -text
