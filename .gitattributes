@@ -128,6 +128,8 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/QueryType
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Report.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ReportTemplate.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/Url.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/WorkflowReport.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/WorkflowTemplate.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeries.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/folder/items/ts/TimeSeriesInfo.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/privilegemanager/PrivilegeManager.java -text
