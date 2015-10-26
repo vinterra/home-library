@@ -78,10 +78,12 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingE
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryAdd.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryCreate.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryCut.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryDelete.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryPaste.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRead.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRemoval.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRenaming.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRestore.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryShare.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryUnshare.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryUpdate.java -text
