@@ -43,6 +43,7 @@ src/main/java/org/gcube/common/homelibrary/home/Home.java -text
 src/main/java/org/gcube/common/homelibrary/home/HomeLibrary.java -text
 src/main/java/org/gcube/common/homelibrary/home/HomeManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/HomeManagerFactory.java -text
+src/main/java/org/gcube/common/homelibrary/home/MemoryCache.java -text
 src/main/java/org/gcube/common/homelibrary/home/User.java -text
 src/main/java/org/gcube/common/homelibrary/home/data/ApplicationsArea.java -text
 src/main/java/org/gcube/common/homelibrary/home/data/application/ApplicationData.java -text
