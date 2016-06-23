@@ -76,7 +76,7 @@ public interface WorkspaceTrashFolder extends WorkspaceFolder {
 	 * @return a trashed item
 	 * @throws InternalErrorException
 	 * @throws RepositoryException 
-	 * @deprecated use {@link Workspace#getItem()} instead 
+	 * @deprecated use {@link org.gcube.common.homelibrary.home.workspace.Workspace#getItem(String itemId)} instead 
 	 */
 	@Deprecated
 	public  WorkspaceTrashItem getTrashItemById(String id) throws InternalErrorException, RepositoryException;

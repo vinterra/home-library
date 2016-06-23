@@ -4,7 +4,6 @@
 package org.gcube.common.homelibrary.home.workspace;
 
 import java.util.List;
-import java.util.Map;
 
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
@@ -31,7 +30,7 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @return Administrators
 	 * @throws InternalErrorException
 	 */
-	List<String> getAdministrators() throws InternalErrorException;
+	public List<String> getAdministrators() throws InternalErrorException;
 	
 	
 	/**
@@ -54,21 +53,21 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @return the list of users. 
 	 * @throws InternalErrorException
 	 */
-	List<String> getUsers() throws InternalErrorException;
+	public List<String> getUsers() throws InternalErrorException;
 	
 	/**
 	 * @param user
 	 * @throws InsufficientPrivilegesException
 	 * @throws InternalErrorException
 	 */
-	void addUser(String user) throws InsufficientPrivilegesException,
+	public void addUser(String user) throws InsufficientPrivilegesException,
 	InternalErrorException;
 	
 	/**
 	 * @return a new {@link WorkspaceFolder}
 	 * @throws InternalErrorException
 	 */
-	WorkspaceFolder unShare() throws InternalErrorException;
+	public WorkspaceFolder unShare() throws InternalErrorException;
 	
 	
 	/**
@@ -78,14 +77,14 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @return a new {@link WorkspaceFolder}
 	 * @throws InternalErrorException
 	 */
-	WorkspaceFolder unShare(String user) throws InternalErrorException;
+	public WorkspaceFolder unShare(String user) throws InternalErrorException;
 	
 	/**
 	 * @param user
 	 * @return the shared folder name set by the user, null if the user doen't exist.
 	 * @throws InternalErrorException
 	 */
-	String getName(String user) throws InternalErrorException;
+	public String getName(String user) throws InternalErrorException;
 
 	/**
 	 * Set ACLs on shared folder
@@ -120,7 +119,7 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @return
 	 * @throws InternalErrorException
 	 */
-	List<String> getMembers() throws InternalErrorException;
+	public List<String> getMembers() throws InternalErrorException;
 
 	/**
 	 * Get groups in a shared folder
@@ -128,12 +127,13 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @throws InternalErrorException
 	 */
 	@Deprecated
-	List<String> getGroups() throws InternalErrorException;
+	public List<String> getGroups() throws InternalErrorException;
 
 	
 	public WorkspaceSharedFolder share(List<String> users) throws InsufficientPrivilegesException,
 	WrongDestinationException, InternalErrorException;
 
-	
+
+
 	
 }

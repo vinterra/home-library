@@ -129,6 +129,14 @@ public class WorkspaceUtil {
 		return destinationFolder.createExternalGenericItem(name, description, storageId);
 	}
 	
+	
+	
+	public static FolderItem createExternalFile(WorkspaceFolder destinationFolder, String name, String description, String mimeType, String storageId) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException, IOException
+	{	
+		return destinationFolder.createExternalGenericItem(name, description, storageId, mimeType);
+	}
+	
+	
 	/**
 	 * Create a external file with properties
 	 * @param destinationFolder the destination folder.
@@ -146,6 +154,7 @@ public class WorkspaceUtil {
 	{
 		return destinationFolder.createExternalGenericItem(name, description, storageId, properties);
 	}
+
 
 	
 
@@ -166,6 +175,10 @@ public class WorkspaceUtil {
 	{
 		return destinationFolder.createExternalGenericItem(name, description, storageId, properties, mimeType, size);
 	}
+	
+
+	
+	
 	
 	/**
 	 * Create a external file in the specified folder.
@@ -240,6 +253,8 @@ public class WorkspaceUtil {
 		return destinationFolder.createExternalGenericItem(name, description, is, properties, mimeType, size);
 	}
 
+	
+	
 	/**
 	 * Get ACL by key
 	 * @param list

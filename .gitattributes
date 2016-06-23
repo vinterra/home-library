@@ -43,7 +43,6 @@ src/main/java/org/gcube/common/homelibrary/home/Home.java -text
 src/main/java/org/gcube/common/homelibrary/home/HomeLibrary.java -text
 src/main/java/org/gcube/common/homelibrary/home/HomeManager.java -text
 src/main/java/org/gcube/common/homelibrary/home/HomeManagerFactory.java -text
-src/main/java/org/gcube/common/homelibrary/home/MemoryCache.java -text
 src/main/java/org/gcube/common/homelibrary/home/User.java -text
 src/main/java/org/gcube/common/homelibrary/home/data/ApplicationsArea.java -text
 src/main/java/org/gcube/common/homelibrary/home/data/application/ApplicationData.java -text
@@ -69,8 +68,8 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/ExternalResourceLinkPl
 src/main/java/org/gcube/common/homelibrary/home/workspace/Properties.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/Workspace.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceFolder.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceInternalLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItem.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceReference.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSharedFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceSmartFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceVREFolder.java -text
@@ -209,7 +208,6 @@ src/test/java/org/gcube/common/homelibrary/examples/CreateAnUniqueItemName.java 
 src/test/java/org/gcube/common/homelibrary/examples/CreateDataFolder.java -text
 src/test/java/org/gcube/common/homelibrary/examples/ExamplesUtil.java -text
 src/test/java/org/gcube/common/homelibrary/examples/FolderBulkCreatorExample.java -text
-src/test/java/org/gcube/common/homelibrary/examples/HomeManagerListAllUsersContent.java -text
 src/test/java/org/gcube/common/homelibrary/examples/ImportExportFolder.java -text
 src/test/java/org/gcube/common/homelibrary/examples/MoveWorkspaceItem.java -text
 src/test/java/org/gcube/common/homelibrary/examples/VisitDataFolder.java -text

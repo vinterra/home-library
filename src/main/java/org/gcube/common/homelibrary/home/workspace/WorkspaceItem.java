@@ -277,7 +277,7 @@ public interface WorkspaceItem {
 	 * Return true if the user has the right to read the resource at abspath
 	 * @param user
 	 * @param absPath: absolute path of a node
-	 * @return
+	 * @return true if the user has the right to read the resource at abspath
 	 * @throws RepositoryException
 	 * @throws InternalErrorException
 	 */
@@ -304,12 +304,6 @@ public interface WorkspaceItem {
 	 */
 	public Map<ACLType, List<String>> getACLOwner() throws InternalErrorException;
 
-	/**
-	 * Get the path of the items that are referencing the node based on this object.
-	 * @return the path of the items that are referencing the node
-	 * @throws InternalErrorException
-	 */
-	public List<String> getReferences() throws InternalErrorException;
 
 
 }

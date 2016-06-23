@@ -53,6 +53,7 @@ public class ZipFile extends AbstractZipItem {
 	}
 
 	/**
+	 * Get content file
 	 * @return the contentFile
 	 */
 	public File getContentFile() {
@@ -61,7 +62,7 @@ public class ZipFile extends AbstractZipItem {
 	
 	/**
 	 * Returns the content stream.
-	 * @return
+	 * @return the content stream
 	 */
 	public InputStream getContentStream(){
 		return contentStream;

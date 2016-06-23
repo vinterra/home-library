@@ -79,7 +79,7 @@ public interface Workspace extends WorkspaceEventSource {
 
 	/**
 	 * Get a list of workspaceItem parents by id
-	 * @param id: the item id
+	 * @param id the item id
 	 * @return a list of parents
 	 * @throws InternalErrorException
 	 */
@@ -95,12 +95,13 @@ public interface Workspace extends WorkspaceEventSource {
 
 	/**
 	 * Add a Bookmark
-	 * @param name
-	 * @param folderId
+	 * @param itemId
+	 * @param destinationFolderId
 	 * @throws ItemAlreadyExistException
 	 * @throws InternalErrorException
-	 * @throws RepositoryException 
-	 * @throws PathNotFoundException 
+	 * @throws WrongDestinationException
+	 * @throws ItemNotFoundException
+	 * @throws WorkspaceFolderNotFoundException
 	 */
 	@Deprecated
 	public void addBookmark(String itemId, String destinationFolderId)
@@ -167,7 +168,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @param description
 	 * @param destinationFolderId
 	 * @param properties
-	 * @return
+	 * @return the new folder
 	 * @throws InternalErrorException
 	 * @throws InsufficientPrivilegesException
 	 * @throws ItemAlreadyExistException
@@ -193,6 +194,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 */
 	public ExternalImage createExternalImage(String name, String description, String mimeType, InputStream imageData, String destinationFolderId) throws InsufficientPrivilegesException, WorkspaceFolderNotFoundException, InternalErrorException, ItemAlreadyExistException, WrongDestinationException;
 
+
 	/**
 	 * Create a new External Image with properties
 	 * @param name
@@ -201,7 +203,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @param imageData
 	 * @param destinationFolderId
 	 * @param properties
-	 * @return
+	 * @return the new external image
 	 * @throws InsufficientPrivilegesException
 	 * @throws WorkspaceFolderNotFoundException
 	 * @throws InternalErrorException
@@ -235,7 +237,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @param fileData
 	 * @param destinationFolderId
 	 * @param properties
-	 * @return
+	 * @return the new external file
 	 * @throws InsufficientPrivilegesException
 	 * @throws WorkspaceFolderNotFoundException
 	 * @throws InternalErrorException
@@ -261,6 +263,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 */
 	public ExternalPDFFile createExternalPDFFile(String name, String description, String mimeType, InputStream fileData, String destinationFolderId) throws InsufficientPrivilegesException, WorkspaceFolderNotFoundException, InternalErrorException, ItemAlreadyExistException, WrongDestinationException;
 
+
 	/**
 	 * Create a new External PDF File with properties
 	 * @param name
@@ -269,7 +272,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @param fileData
 	 * @param destinationFolderId
 	 * @param properties
-	 * @return
+	 * @return the new external pdf file
 	 * @throws InsufficientPrivilegesException
 	 * @throws WorkspaceFolderNotFoundException
 	 * @throws InternalErrorException
@@ -295,7 +298,15 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws IOException 
 	 */
 	public ExternalUrl createExternalUrl(String name, String description, String url, String destinationFolderId) throws InsufficientPrivilegesException, WorkspaceFolderNotFoundException, InternalErrorException, ItemAlreadyExistException, WrongDestinationException, IOException;
-
+	/**
+	 * Add a Bookmark
+	 * @param itemId
+	 * @param destinationFolderId
+	 * @throws ItemAlreadyExistException
+	 * @throws InternalErrorException
+	 * @throws RepositoryException 
+	 * @throws PathNotFoundException 
+	 */
 	/**
 	 * Create a new External URL into a folder.
 	 * @param name the external URL name.
@@ -433,7 +444,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * Move a workspaceItem to a specified destination.
 	 * @param itemId the item to move.
 	 * @param destinationFolderId the destination folder. 
-	 * @return 
+	 * @return the moved workspaceItem
 	 * @throws ItemNotFoundException if the specified item has not been found.
 	 * @throws WrongDestinationException if the specified destination has not been found.
 	 * @throws InsufficientPrivilegesException if the user don't have sufficient privileges to perform this operation.
@@ -597,6 +608,7 @@ public interface Workspace extends WorkspaceEventSource {
 	/**
 	 * Search by Name
 	 * @param name
+	 * @param folderId
 	 * @return a list of SearchItem
 	 * @throws InternalErrorException
 	 */
@@ -605,7 +617,7 @@ public interface Workspace extends WorkspaceEventSource {
 	/**
 	 * Search By MimeType
 	 * @param mimeType
-	 * @returnSearchIte a list of SearchFolderItem
+	 * @return a list of SearchFolderItem
 	 * @throws InternalErrorException
 	 */
 	public List<SearchFolderItem> searchByMimeType(String mimeType)
@@ -682,12 +694,11 @@ public interface Workspace extends WorkspaceEventSource {
 	public String getUrlWebDav() throws InternalErrorException;
 
 
-
 	/**
 	 * Create a shared folder with a list of users
 	 * @param name
 	 * @param description
-	 * @param users. A list of portal logins.
+	 * @param users A list of portal logins
 	 * @param destinationFolderId
 	 * @return the shared folder
 	 * @throws InternalErrorException
@@ -707,9 +718,9 @@ public interface Workspace extends WorkspaceEventSource {
 	 * Create a shared folder associated with a groupId 
 	 * @param name the name of the folder
 	 * @param description
-	 * @param groupId: an existing groupId to associate with the folder
-	 * @param destinationFolderId (not used)
-	 * @param diplayName a friendly name for the folder
+	 * @param groupId an existing groupId to associate with the folder
+	 * @param destinationFolderId
+	 * @param displayName a friendly name for the folder
 	 * @param isVREFolder a flag to indicate the folder is a VRE Folder
 	 * @return the shared folder
 	 * @throws InternalErrorException
@@ -727,7 +738,7 @@ public interface Workspace extends WorkspaceEventSource {
 
 	/**
 	 * Shared an exist {@link WorkspaceFolder} with a list of users
-	 * @param users. A list of portal logins. 
+	 * @param users A list of portal logins. 
 	 * @param destinationFolderId
 	 * @return the shared folder
 	 * @throws InternalErrorException
@@ -745,8 +756,8 @@ public interface Workspace extends WorkspaceEventSource {
 
 	/**
 	 * Shared an exist {@link WorkspaceFolder} with a list of users
-	 * @param users. A list of portal logins. 
-	 * @param destinationFolderId
+	 * @param users A list of portal logins. 
+	 * @param itemId
 	 * @return the shared folder
 	 * @throws InternalErrorException
 	 * @throws InsufficientPrivilegesException
@@ -810,7 +821,7 @@ public interface Workspace extends WorkspaceEventSource {
 
 	/**
 	 * Get MySpecialFolders
-	 * @return
+	 * @return my special folders
 	 * @throws InternalErrorException
 	 * @throws ItemNotFoundException
 	 */
@@ -903,21 +914,9 @@ public interface Workspace extends WorkspaceEventSource {
 	 */
 	public WorkspaceFolder getApplicationArea() throws InternalErrorException;
 
-
-	/**
-	 * Create a link of a given item in a destination folder
-	 * @param itemId
-	 * @param destinationFolderId
-	 * @param name for the link
-	 * @return the link
-	 * @throws InternalErrorException 
-	 * @throws  
-	 */
-	public WorkspaceReference createReference(String itemId, String destinationFolderId, String name) throws InternalErrorException;
-
 	/**
 	 * Remove a list of items identified by ids
-	 * @param ids
+	 * @param id
 	 * @return a map of errors: Map<id, error>
 	 * @throws ItemNotFoundException
 	 * @throws InternalErrorException
@@ -928,10 +927,11 @@ public interface Workspace extends WorkspaceEventSource {
 
 
 	/**
+	 * Create a VRE folder
 	 * @param scope
 	 * @param description
 	 * @param displayName
-	 * @return
+	 * @return a new VRE folder
 	 * @throws InternalErrorException
 	 * @throws InsufficientPrivilegesException
 	 * @throws ItemAlreadyExistException
@@ -939,11 +939,20 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws ItemNotFoundException
 	 * @throws WorkspaceFolderNotFoundException
 	 */
-	WorkspaceVREFolder createVREFolder(String scope, String description,
+	public WorkspaceVREFolder createVREFolder(String scope, String description,
 			String displayName) throws InternalErrorException,
 			InsufficientPrivilegesException, ItemAlreadyExistException,
 			WrongDestinationException, ItemNotFoundException,
 			WorkspaceFolderNotFoundException;
+
+	/**
+	 * Create a link of a given item in a destination folder
+	 * @param itemId
+	 * @param destinationFolderId
+	 * @return the link
+	 * @throws InternalErrorException
+	 */
+	public WorkspaceInternalLink copyAsLink(String itemId, String destinationFolderId) throws InternalErrorException;
 
 
 

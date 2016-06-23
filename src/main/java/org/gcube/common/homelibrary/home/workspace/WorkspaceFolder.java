@@ -135,12 +135,11 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 * Create an External URL into this folder.
 	 * @param name the external URL name.
 	 * @param description the external URL description.
-	 * @param url the URL.
+	 * @param tmpFile a temporary file
 	 * @return the new URL file.
-	 * @throws InsufficientPrivilegesException if the user don't have sufficient privileges to perform this operation.
-	 * @throws InternalErrorException if an internal error occurs.
-	 * @throws ItemAlreadyExistException if an item with the specified name already exists.
-	 * @throws IOException 
+	 * @throws InsufficientPrivilegesException
+	 * @throws InternalErrorException
+	 * @throws ItemAlreadyExistException
 	 */
 	public ExternalUrl createExternalUrlItem(String name, String description, File tmpFile) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException;
 
@@ -312,8 +311,9 @@ public interface WorkspaceFolder extends WorkspaceItem {
 
 
 	/**
-	 * @param useers
-	 * @return
+	 * Share a folder
+	 * @param users A list of users
+	 * @return the shared folder
 	 * @throws InsufficientPrivilegesException
 	 * @throws WrongDestinationException
 	 * @throws InternalErrorException
@@ -330,13 +330,15 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	public void setACL(List<String> users, ACLType privilege)
 			throws InternalErrorException;
 
+	
 	/**
 	 * Get an unique name for an item
 	 * @param initialName
-	 * @return 
+	 * @param copy If true, create a name as name(copy x)
+	 * @return unique name
 	 * @throws InternalErrorException
 	 */
-	public String getUniqueName(String initialName, boolean b) throws InternalErrorException;
+	public String getUniqueName(String initialName, boolean copy) throws InternalErrorException;
 
 	/**
 	 * Get the size of a folder
@@ -352,10 +354,11 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 */
 	public int getCount() throws InternalErrorException;
 
+	
 	/**
 	 * Get items ordered by jcr:lastModified
-	 * @param limit: The maximum result size
-	 * @return
+	 * @param limit The maximum result size
+	 * @return a list of last items
 	 * @throws InternalErrorException
 	 */
 	public List<WorkspaceItem> getLastItems(int limit)
@@ -395,7 +398,7 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 * @param properties
 	 * @param mimetype
 	 * @param size
-	 * @return
+	 * @return a new item
 	 * @throws InternalErrorException
 	 * @throws InsufficientPrivilegesException
 	 * @throws ItemAlreadyExistException
@@ -414,6 +417,17 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	public FolderItem createExternalGenericItem(String name,
 			String description, String storageId) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException;
 
+	
+	/**
+	 * Create a generic item by storage id and mimetype
+	 * @param name
+	 * @param description
+	 * @param storageId
+	 * @param mimeType
+	 * @return a new file
+	 */
+	public FolderItem createExternalGenericItem(String name, String description, String storageId, String mimeType) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException;
+	
 
 	/**
 	 * Create a generic item with properties by storage id
@@ -438,7 +452,40 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 */
 	public FolderItem createExternalGenericItem(String name, String description, String storageId, Map<String, String> properties, String mimeType, long size) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException;
 
+	/**
+	 * Mark folder as system folder
+	 * @param systemFolder
+	 * @throws InternalErrorException
+	 */
+	public void setSystemFolder(boolean systemFolder) throws InternalErrorException;
 
+	/**
+	 * Check if a folder is a system folder
+	 * @return true if the folder is a system folder
+	 * @throws InternalErrorException
+	 */
+	public boolean isSystemFolder() throws InternalErrorException;
 
+	/**
+	 * Get the path of the items that are referencing the node based on this object.
+	 * @return the path of the items that are referencing the node
+	 * @throws InternalErrorException
+	 */
+	public List<String> getReferences() throws InternalErrorException;
+
+	/**
+	 * Return true if the item is referenced
+	 * @return true if the item is referenced, false otherwise
+	 * @throws InternalErrorException
+	 */
+	public boolean isReferenced() throws InternalErrorException;
+
+	/**
+	 * Create a reference in a given destinationID
+	 * @param destinationID
+	 * @param name
+	 * @throws InternalErrorException 
+	 */
+	public WorkspaceInternalLink copyAsLink(String destinationID) throws InternalErrorException;
 
 }
