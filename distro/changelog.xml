@@ -140,4 +140,14 @@
 		<Change>Feature #2458: HL: add mime type to MimeTypeUtil ;
 		</Change>
 	</Changeset>
+		<Changeset component="org.gcube.common.home-library.2-4-0"
+		date="2016-06-23">
+			<Change>Bug #4139: Cannot obtain public URL for shared folders;
+		</Change>
+		<Change>Feature #4219: Use storage ID to download files from storage;
+		</Change>
+		<Change>Feature #4186: HL: Add time to live to cache;</Change>
+		<Change>Feature #4216: Set a folder as System Folder;</Change>
+		<Change>Feature #4186: HL: Add time to live to cache;</Change>
+	</Changeset>
 </ReleaseNotes>
