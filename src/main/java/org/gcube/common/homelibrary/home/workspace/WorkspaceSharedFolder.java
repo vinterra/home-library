@@ -24,15 +24,15 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @throws InternalErrorException
 	 */
 	String getDisplayName() throws InternalErrorException;
-	
+
 	/**
 	 * Get Administrators
 	 * @return Administrators
 	 * @throws InternalErrorException
 	 */
 	public List<String> getAdministrators() throws InternalErrorException;
-	
-	
+
+
 	/**
 	 * Add administrators to a shared folder
 	 * @throws InsufficientPrivilegesException
@@ -40,7 +40,7 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 */
 	boolean addAdmin(String username) throws InsufficientPrivilegesException,
 	InternalErrorException;
-	
+
 	/**
 	 * Set administrators
 	 * @throws InsufficientPrivilegesException
@@ -48,13 +48,13 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 */
 	boolean setAdmins(List<String> logins) throws InsufficientPrivilegesException,
 	InternalErrorException;
-	
+
 	/**
 	 * @return the list of users. 
 	 * @throws InternalErrorException
 	 */
 	public List<String> getUsers() throws InternalErrorException;
-	
+
 	/**
 	 * @param user
 	 * @throws InsufficientPrivilegesException
@@ -62,14 +62,14 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 */
 	public void addUser(String user) throws InsufficientPrivilegesException,
 	InternalErrorException;
-	
+
 	/**
 	 * @return a new {@link WorkspaceFolder}
 	 * @throws InternalErrorException
 	 */
 	public WorkspaceFolder unShare() throws InternalErrorException;
-	
-	
+
+
 	/**
 	 * Unshare a single user
 	 * 
@@ -78,7 +78,7 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 * @throws InternalErrorException
 	 */
 	public WorkspaceFolder unShare(String user) throws InternalErrorException;
-	
+
 	/**
 	 * @param user
 	 * @return the shared folder name set by the user, null if the user doen't exist.
@@ -100,13 +100,16 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	 */
 	boolean isVreFolder();
 
+	void setVREFolder(boolean isVREFolder) throws InternalErrorException;
+//	void setDisplayName(String displayName) throws InternalErrorException;
+
 	/**
 	 * Get the privilege set on a WorkspaceSharedFolder
 	 * @return
 	 * @throws InternalErrorException
 	 */
 	ACLType getPrivilege() throws InternalErrorException;
-	
+
 	/**
 	 * Delete privileges for a list of users
 	 * @param users
@@ -129,11 +132,11 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	@Deprecated
 	public List<String> getGroups() throws InternalErrorException;
 
-	
+
 	public WorkspaceSharedFolder share(List<String> users) throws InsufficientPrivilegesException,
 	WrongDestinationException, InternalErrorException;
 
 
 
-	
+
 }

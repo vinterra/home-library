@@ -113,7 +113,7 @@ public class WorkspaceUtil {
 
 	
 	/**
-	 * Create a external file in the specified folder.
+	 * Create an external file in the specified folder.
 	 * @param destinationFolder the destination folder.
 	 * @param name the external file name.
 	 * @param description the external file description.

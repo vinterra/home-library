@@ -15,6 +15,7 @@ import org.gcube.common.homelibary.model.items.type.GenericItemType;
 import org.gcube.common.homelibrary.home.Home;
 import org.gcube.common.homelibrary.home.User;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
+import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibrary.home.workspace.acl.Capabilities;
 import org.gcube.common.homelibrary.home.workspace.events.WorkspaceEventSource;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
@@ -43,6 +44,7 @@ import org.gcube.common.homelibrary.home.workspace.search.SearchItem;
 import org.gcube.common.homelibrary.home.workspace.search.util.SearchQuery;
 import org.gcube.common.homelibrary.home.workspace.sharing.WorkspaceMessageManager;
 import org.gcube.common.homelibrary.home.workspace.trash.WorkspaceTrashFolder;
+import org.gcube.common.homelibrary.home.workspace.usermanager.GCubeGroup;
 
 /**
  * Represents a user workspace.
@@ -674,6 +676,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws InsufficientPrivilegesException if the user don't have sufficient privileges to perform this operation. 
 	 * @throws ItemNotFoundException if the aquamaps item has not found.
 	 */
+	@Deprecated
 	public WorkspaceFolder decomposeAquaMapsItem(String itemId, String folderName, String destinationWorkspaceId) throws WrongItemTypeException, WorkspaceFolderNotFoundException, WrongDestinationException, InternalErrorException, ItemAlreadyExistException, InsufficientPrivilegesException, ItemNotFoundException;
 
 	/**
@@ -940,7 +943,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws WorkspaceFolderNotFoundException
 	 */
 	public WorkspaceVREFolder createVREFolder(String scope, String description,
-			String displayName) throws InternalErrorException,
+			String displayName, ACLType privilege) throws InternalErrorException,
 			InsufficientPrivilegesException, ItemAlreadyExistException,
 			WrongDestinationException, ItemNotFoundException,
 			WorkspaceFolderNotFoundException;
@@ -953,6 +956,20 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws InternalErrorException
 	 */
 	public WorkspaceInternalLink copyAsLink(String itemId, String destinationFolderId) throws InternalErrorException;
+
+	/**
+	 * @param groupId
+	 * @return
+	 * @throws InternalErrorException
+	 */
+	GCubeGroup getGroup(String groupId) throws InternalErrorException;
+
+	/**
+	 * @param groupId
+	 * @return
+	 * @throws InternalErrorException
+	 */
+	boolean isGroup(String groupId) throws InternalErrorException;
 
 
 

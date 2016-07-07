@@ -60,6 +60,7 @@ public interface HomeManager {
 	 * @throws InternalErrorException if an internal error occurs.
 	 * @throws HomeNotFoundException if no home is found for the given user.
 	 */
+	@Deprecated
 	public Home getHome(User user) throws InternalErrorException, HomeNotFoundException;
 	
 	
@@ -71,6 +72,7 @@ public interface HomeManager {
 	 * @throws HomeNotFoundException if no home is found for the given user.
 	 * @throws UserNotFoundException if no user is found for the specified portalLogin.
 	 */
+	@Deprecated
 	public Home getHome(String portalLogin) throws InternalErrorException, HomeNotFoundException, UserNotFoundException;
 	
 	
@@ -88,6 +90,16 @@ public interface HomeManager {
 	 * @throws InternalErrorException if an internal error occurs.
 	 */
 	public MemoryCache<String, Home> getCache() throws InternalErrorException;
+
+
+	/**
+	 * Get user home using token
+	 * @return the user home
+	 * @throws InternalErrorException
+	 * @throws HomeNotFoundException
+	 * @throws UserNotFoundException 
+	 */
+	public Home getHome() throws InternalErrorException, HomeNotFoundException, UserNotFoundException;
 
 	
 }
