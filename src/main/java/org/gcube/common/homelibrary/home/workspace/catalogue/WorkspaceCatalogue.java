@@ -16,30 +16,20 @@ import org.gcube.common.homelibrary.home.workspace.WorkspaceItem;
 public interface WorkspaceCatalogue extends WorkspaceFolder {
 
 	/**
-	 * @param path
-	 * @return
+	 * Retrieve a catalogue item by id
+	 * @param id the ID of a catalogue item
+	 * @return a catalogue item
 	 * @throws InternalErrorException
 	 */
-	public WorkspaceItem getCatalogueItem(String path) throws InternalErrorException;
-
-	/**
-	 * Create a folder into Catalogue
-	 * @param name a name for the new folder
-	 * @param destinationFolderID the ID of an existing catalogue folder
-	 * @return the folder
-	 * @throws InternalErrorException
-	 */
-	public WorkspaceFolder addWorkspaceFolder(String folderID) throws InternalErrorException;
-	
+	public WorkspaceItem getCatalogueItem(String id) throws InternalErrorException;
 	
 	/**
-	 * Create a folder into Catalogue
-	 * @param name a name for the new folder
-	 * @param description a description for the new folder
-	 * @return the folder
+	 * Retrieve a catalogue item by relative path
+	 * @param path the relative path of a catalogue item
+	 * @return a catalogue item
 	 * @throws InternalErrorException
 	 */
-	public WorkspaceFolder addWorkspaceFolder(String folderID, String destinationFolderID) throws InternalErrorException;
+	public WorkspaceItem getCatalogueItemByPath(String path) throws InternalErrorException;
 	
 	/**catalogueItemID
 	 * Copy item into Catalogue Folder
