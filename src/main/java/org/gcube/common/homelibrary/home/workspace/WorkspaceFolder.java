@@ -10,8 +10,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
-import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
+import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.ItemAlreadyExistException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.WrongDestinationException;
@@ -487,5 +487,13 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 * @throws InternalErrorException 
 	 */
 	public WorkspaceInternalLink copyAsLink(String destinationID) throws InternalErrorException;
+
+	/**
+	 * @param showHidden
+	 * @return
+	 * @throws InternalErrorException
+	 */
+	public List<WorkspaceItem> getChildren(boolean showHidden) throws InternalErrorException;
+	
 
 }

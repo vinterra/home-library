@@ -111,7 +111,7 @@ public class WorkspaceUtil {
 	}
 
 
-	
+
 	/**
 	 * Create an external file in the specified folder.
 	 * @param destinationFolder the destination folder.
@@ -128,15 +128,15 @@ public class WorkspaceUtil {
 	{
 		return destinationFolder.createExternalGenericItem(name, description, storageId);
 	}
-	
-	
-	
+
+
+
 	public static FolderItem createExternalFile(WorkspaceFolder destinationFolder, String name, String description, String mimeType, String storageId) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException, IOException
 	{	
 		return destinationFolder.createExternalGenericItem(name, description, storageId, mimeType);
 	}
-	
-	
+
+
 	/**
 	 * Create a external file with properties
 	 * @param destinationFolder the destination folder.
@@ -156,7 +156,7 @@ public class WorkspaceUtil {
 	}
 
 
-	
+
 
 	/**
 	 * Create a external file with properties
@@ -175,11 +175,11 @@ public class WorkspaceUtil {
 	{
 		return destinationFolder.createExternalGenericItem(name, description, storageId, properties, mimeType, size);
 	}
-	
 
-	
-	
-	
+
+
+
+
 	/**
 	 * Create a external file in the specified folder.
 	 * @param destinationFolder the destination folder.
@@ -197,7 +197,7 @@ public class WorkspaceUtil {
 	{	
 		return destinationFolder.createExternalGenericItem(name, description, is);
 	}
-	
+
 	/**
 	 * Create an item by inpustream with a given mimetype
 	 * @param destinationFolder
@@ -233,7 +233,7 @@ public class WorkspaceUtil {
 	{	
 		return destinationFolder.createExternalGenericItem(name, description, is, properties);
 	}
-	
+
 	/**
 	 * Create an external file with mimetype and properties
 	 * @param destinationFolder
@@ -253,32 +253,36 @@ public class WorkspaceUtil {
 		return destinationFolder.createExternalGenericItem(name, description, is, properties, mimeType, size);
 	}
 
-	
-	
+
+
 	/**
 	 * Get ACL by key
 	 * @param list
+	 * @throws InternalErrorException 
 	 * @returna list of members
 	 */
-	public static ACLType getACLTypeByKey(List<String> list) {
-		switch(list.get(0)){
+	public static ACLType getACLTypeByKey(List<String> list) throws InternalErrorException {
+		if (list.size()>0){
+			switch(list.get(0)){
 
-		case READ_ONLY:
-			return ACLType.READ_ONLY;	
+			case READ_ONLY:
+				return ACLType.READ_ONLY;	
 
-		case WRITE_OWNER:	
-			return ACLType.WRITE_OWNER;		
+			case WRITE_OWNER:	
+				return ACLType.WRITE_OWNER;		
 
-		case WRITE_ALL:
-			return ACLType.WRITE_ALL;	
+			case WRITE_ALL:
+				return ACLType.WRITE_ALL;	
 
-		case ADMINISTRATOR:
-			return ACLType.ADMINISTRATOR;		
+			case ADMINISTRATOR:
+				return ACLType.ADMINISTRATOR;		
 
-		default:
-			return ACLType.READ_ONLY;
+			default:
+				return ACLType.READ_ONLY;
 
-		}		
+			}	
+		}else
+			throw new InternalErrorException("ACL type not retrieved");
 	}
 
 	/**

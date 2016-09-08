@@ -101,5 +101,14 @@ public interface HomeManager {
 	 */
 	public Home getHome() throws InternalErrorException, HomeNotFoundException, UserNotFoundException;
 
+
+	/**
+	 * @return
+	 * @throws InternalErrorException
+	 * @throws HomeNotFoundException
+	 * @throws UserNotFoundException
+	 */
+	public Home getGuestLogin() throws InternalErrorException, HomeNotFoundException, UserNotFoundException;
+
 	
 }

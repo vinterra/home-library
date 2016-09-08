@@ -8,11 +8,12 @@ import java.util.List;
 import java.util.Map;
 
 import javax.jcr.RepositoryException;
+
+import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibary.model.items.type.WorkspaceItemType;
 import org.gcube.common.homelibary.model.util.WorkspaceItemAction;
 import org.gcube.common.homelibrary.home.User;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
-import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibrary.home.workspace.accounting.AccountingEntry;
 import org.gcube.common.homelibrary.home.workspace.accounting.AccountingEntryRead;
 import org.gcube.common.homelibrary.home.workspace.acl.Capabilities;
@@ -303,7 +304,7 @@ public interface WorkspaceItem {
 	 * @throws InternalErrorException
 	 */
 	public Map<ACLType, List<String>> getACLOwner() throws InternalErrorException;
-
+	
 
 
 }

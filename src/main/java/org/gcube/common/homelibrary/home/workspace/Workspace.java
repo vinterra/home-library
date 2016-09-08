@@ -11,12 +11,14 @@ import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
+
 import org.gcube.common.homelibary.model.items.type.GenericItemType;
 import org.gcube.common.homelibrary.home.Home;
 import org.gcube.common.homelibrary.home.User;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibrary.home.workspace.acl.Capabilities;
+import org.gcube.common.homelibrary.home.workspace.catalogue.WorkspaceCatalogue;
 import org.gcube.common.homelibrary.home.workspace.events.WorkspaceEventSource;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.ItemAlreadyExistException;
@@ -45,6 +47,7 @@ import org.gcube.common.homelibrary.home.workspace.search.util.SearchQuery;
 import org.gcube.common.homelibrary.home.workspace.sharing.WorkspaceMessageManager;
 import org.gcube.common.homelibrary.home.workspace.trash.WorkspaceTrashFolder;
 import org.gcube.common.homelibrary.home.workspace.usermanager.GCubeGroup;
+
 
 /**
  * Represents a user workspace.
@@ -971,6 +974,19 @@ public interface Workspace extends WorkspaceEventSource {
 	 */
 	boolean isGroup(String groupId) throws InternalErrorException;
 
+	/**
+	 * Get Catalogue
+	 * @return the catalogue
+	 * @throws InternalErrorException
+	 */
+	public WorkspaceCatalogue getCatalogue() throws InternalErrorException;
+
+	/**
+	 * @param queryString
+	 * @return
+	 * @throws InternalErrorException
+	 */
+	public List<WorkspaceItem> searchByProperties(SearchQuery queryString) throws InternalErrorException;
 
 
 
