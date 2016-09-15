@@ -51,9 +51,9 @@ public class UnzipUtil {
 			throw new InternalErrorException(e);
 		}
 
-		logger.trace("Zip Model:");
-		ZipModelVisitor visitor = new ZipModelVisitor();
-		visitor.visit(items);
+//		logger.trace("Zip Model:");
+//		ZipModelVisitor visitor = new ZipModelVisitor();
+//		visitor.visit(items);
 
 		logger.trace("Creating the items");
 		ZipModelToWorkspaceCreator creator = new ZipModelToWorkspaceCreator();
@@ -71,9 +71,9 @@ public class UnzipUtil {
 		try {
 			items = zme.getModel();
 			
-			logger.trace("Zip Model:");
-			ZipModelVisitor visitor = new ZipModelVisitor();
-			visitor.visit(items);
+//			logger.trace("Zip Model:");
+//			ZipModelVisitor visitor = new ZipModelVisitor();
+//			visitor.visit(items);
 
 			logger.trace("Creating the items");
 			ZipModelToWorkspaceCreator creator = new ZipModelToWorkspaceCreator();

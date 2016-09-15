@@ -489,11 +489,26 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	public WorkspaceInternalLink copyAsLink(String destinationID) throws InternalErrorException;
 
 	/**
-	 * @param showHidden
-	 * @return
+	 * Get Children with hidden files or not
+	 * @param showHidden to show hidden files
+	 * @return Children with hidden files or not
 	 * @throws InternalErrorException
 	 */
 	public List<WorkspaceItem> getChildren(boolean showHidden) throws InternalErrorException;
+
+	/**
+	 * Check if the folder is public
+	 * @return true if the folder is public, false otherwise
+	 * @throws InternalErrorException
+	 */
+	public boolean isPublic() throws InternalErrorException;
+
+	/**
+	 * Set a folder as public or private
+	 * @param flag true to set the folder as public, false to deny public access
+	 * @throws InternalErrorException
+	 */
+	public void setPublic(boolean flag) throws InternalErrorException;
 	
 
 }

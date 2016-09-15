@@ -194,7 +194,7 @@ public interface WorkspaceItem {
 	 * @param flag <code>true</code> if the element is hidden, <code>false</code> if the element is visible.
 	 * @throws InternalErrorException
 	 */
-	public void setHidden(Boolean flag) throws InternalErrorException;
+	public void setHidden(boolean flag) throws InternalErrorException;
 
 	/**
 	 *  Return a flag indicating whether the element is hidden
@@ -304,6 +304,8 @@ public interface WorkspaceItem {
 	 * @throws InternalErrorException
 	 */
 	public Map<ACLType, List<String>> getACLOwner() throws InternalErrorException;
+
+
 	
 
 

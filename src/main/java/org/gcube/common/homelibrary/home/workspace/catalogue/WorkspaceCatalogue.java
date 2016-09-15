@@ -31,7 +31,7 @@ public interface WorkspaceCatalogue extends WorkspaceFolder {
 	 */
 	public WorkspaceItem getCatalogueItemByPath(String path) throws InternalErrorException;
 	
-	/**catalogueItemID
+	/**
 	 * Copy item into Catalogue Folder
 	 * @param workspaceItemID the ID of the workspaceItem to copy
 	 * @param destinationFolderID the ID of an existing catalogue folder
@@ -40,6 +40,15 @@ public interface WorkspaceCatalogue extends WorkspaceFolder {
 	 */
 	public WorkspaceItem addWorkspaceItem(String workspaceItemID, String destinationFolderID) throws InternalErrorException;
 
+	/**catalogueItemID
+	 * Copy item into Catalogue root
+	 * @param workspaceItemID the ID of the workspaceItem to copy
+	 * @return the copied item
+	 * @throws InternalErrorException
+	 */
+	public WorkspaceItem addWorkspaceItem(String workspaceItemID) throws InternalErrorException;
+
+	
 	/**
 	 * Get a WorkspaceItem by a catalogue item ID
 	 * @param catalogueItemID ID of an element of the catalogue

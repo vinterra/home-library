@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -65,11 +64,11 @@ public class ZipModelWriter {
 		for (ZipItem item:folder.getChildren()) addZipItem(zos, item, skipRoot); 
 	}
 
-	protected void addZipFile(ZipOutputStream zos, ZipFile file, boolean flag) throws IOException
+	protected void addZipFile(ZipOutputStream zos, ZipFile file, boolean skipRoot) throws IOException
 	{
 	
 		ZipEntry zipEntry = null;
-		if (flag){
+		if (skipRoot){
 			String sub = file.getPath().substring(file.getPath().indexOf('/') + 1);
 			int start = sub.indexOf('/') + 1;
 			logger.trace("adding ZipFile path: "+ file.getPath().substring(start));

@@ -26,28 +26,28 @@ public class ZipModelVisitor extends IndentedVisitor {
 	}
 
 
-	/**
-	 * @param items the items to visit.
-	 */
-	public void visit(List<ZipItem> items)
-	{
-		for (ZipItem item:items){
-			visitItem(item);
-		}
-	}
+//	/**
+//	 * @param items the items to visit.
+//	 */
+//	public void visit(List<ZipItem> items)
+//	{
+//		for (ZipItem item:items){
+//			visitItem(item);
+//		}
+//	}
 	
-	/**
-	 * @param item the item to visit.
-	 */
-	public void visitItem(ZipItem item)
-	{
-		println(item.toString());
-		
-		if (item.getType() == ZipItemType.FOLDER){
-			indent();
-			for (ZipItem child:((ZipFolder)item).getChildren()) visitItem(child);
-			outdent();
-		}
-	}
+//	/**
+//	 * @param item the item to visit.
+//	 */
+//	public void visitItem(ZipItem item)
+//	{
+//		println(item.toString());
+//		
+//		if (item.getType() == ZipItemType.FOLDER){
+//			indent();
+//			for (ZipItem child:((ZipFolder)item).getChildren()) visitItem(child);
+//			outdent();
+//		}
+//	}
 
 }
