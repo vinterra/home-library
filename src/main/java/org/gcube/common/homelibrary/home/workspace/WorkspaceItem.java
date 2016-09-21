@@ -306,7 +306,4 @@ public interface WorkspaceItem {
 	public Map<ACLType, List<String>> getACLOwner() throws InternalErrorException;
 
 
-	
-
-
 }

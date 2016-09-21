@@ -52,17 +52,6 @@ public interface AccessManager {
 	 */
 	public boolean setAdminACL(List<String> users, String absPath) throws InternalErrorException;
 
-//	/**
-//	 * Modify the permissions for a node
-//	 * @param users
-//	 * @param resourcePath
-//	 * @param privilegesList
-//	 * @param order
-//	 * @throws InternalErrorException
-//	 */
-//	void modifyAce(List<String> users, String resourcePath,
-//			List<String> privilegesList, String order)
-//			throws InternalErrorException;
 	/**
 	 * Delete old Aces
 	 * @param resourcePath
