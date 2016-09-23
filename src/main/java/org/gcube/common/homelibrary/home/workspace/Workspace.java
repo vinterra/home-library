@@ -961,15 +961,17 @@ public interface Workspace extends WorkspaceEventSource {
 	public WorkspaceInternalLink copyAsLink(String itemId, String destinationFolderId) throws InternalErrorException;
 
 	/**
+	 * Get group name by group id
 	 * @param groupId
-	 * @return
+	 * @return the group name
 	 * @throws InternalErrorException
 	 */
 	GCubeGroup getGroup(String groupId) throws InternalErrorException;
 
 	/**
+	 * Check if a user is a group
 	 * @param groupId
-	 * @return
+	 * @return true if the user is a group, false otherwise
 	 * @throws InternalErrorException
 	 */
 	boolean isGroup(String groupId) throws InternalErrorException;
@@ -979,14 +981,22 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @return the catalogue
 	 * @throws InternalErrorException
 	 */
-	public WorkspaceCatalogue getCatalogue() throws InternalErrorException;
+	WorkspaceCatalogue getCatalogue() throws InternalErrorException;
 
 	/**
+	 * Search items by properties
 	 * @param queryString
-	 * @return
+	 * @return items matching the query
 	 * @throws InternalErrorException
 	 */
-	public List<WorkspaceItem> searchByProperties(SearchQuery queryString) throws InternalErrorException;
+	List<WorkspaceItem> searchByProperties(SearchQuery queryString) throws InternalErrorException;
+
+	/**
+	 * Get public folders
+	 * @return a list of public folder
+	 * @throws InternalErrorException
+	 */
+	List<WorkspaceItem> getPublicFolders() throws InternalErrorException;
 
 
 

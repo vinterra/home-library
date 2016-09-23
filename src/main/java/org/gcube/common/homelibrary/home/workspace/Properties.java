@@ -57,4 +57,6 @@ public interface Properties {
 	 * @throws InternalErrorException
 	 */
 	public void update() throws InternalErrorException;
+	
+	public boolean hasProperty(String property) throws InternalErrorException;
 }
