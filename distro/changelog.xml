@@ -150,4 +150,12 @@
 		<Change>Feature #4216: Set a folder as System Folder;</Change>
 		<Change>Feature #4186: HL: Add time to live to cache;</Change>
 	</Changeset>
+			<Changeset component="org.gcube.common.home-library.2-5-0"
+		date="2016-09-30">
+		<Change>Feature #3782: Adde guest user;
+		</Change>
+		<Change>Feature #5093: Show public folders in a special folders;</Change>
+		<Change>Feature #5092: Add public access to history;</Change>
+		<Change>Feature #4186: Added support to catalogue;</Change>
+	</Changeset>
 </ReleaseNotes>
