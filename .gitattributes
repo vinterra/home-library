@@ -80,6 +80,8 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingE
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryCreate.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryCut.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryDelete.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryDisabledPublicAccess.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryEnabledPublicAccess.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryPaste.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRead.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/accounting/AccountingEntryRemoval.java -text
