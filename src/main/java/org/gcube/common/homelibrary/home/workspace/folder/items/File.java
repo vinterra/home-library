@@ -54,20 +54,13 @@ public interface File {
 	 */
 	public void getHardLink(String linkName) throws InternalErrorException;
 
-	/**
-	 * @return
-	 */
+
 	/**
 	 * The storage ID
 	 * @return the storage ID
 	 */
 	public String getStorageId() throws InternalErrorException;
 
-//	/**
-//	 * @param mimeType
-//	 * @param size
-//	 * @throws InternalErrorException
-//	 */
-//	public void updateInfo(java.io.File file) throws InternalErrorException;
+
 
 }

@@ -330,16 +330,6 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	public void setACL(List<String> users, ACLType privilege)
 			throws InternalErrorException;
 
-	
-	/**
-	 * Get an unique name for an item
-	 * @param initialName
-	 * @param copy If true, create a name as name(copy x)
-	 * @return unique name
-	 * @throws InternalErrorException
-	 */
-	public String getUniqueName(String initialName, boolean copy) throws InternalErrorException;
-
 	/**
 	 * Get the size of a folder
 	 * @return folder size in bytes
@@ -510,5 +500,12 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 */
 	public void setPublic(boolean flag) throws InternalErrorException;
 	
-
+	/**
+	 * Get Unique name
+	 * @param initialName
+	 * @param copy
+	 * @return
+	 * @throws InternalErrorException 
+	 */
+	public String getUniqueName(String initialName, boolean copy) throws InternalErrorException;
 }

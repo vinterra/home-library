@@ -11,6 +11,7 @@ import java.util.Map;
 import org.gcube.common.homelibrary.home.HomeLibrary;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.WorkspaceFolder;
+import org.gcube.common.homelibrary.home.workspace.WorkspaceItem;
 import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.ItemAlreadyExistException;
@@ -276,6 +277,9 @@ public class WorkspaceUtil {
 
 			case ADMINISTRATOR:
 				return ACLType.ADMINISTRATOR;		
+				
+//			case NONE:
+//				return ACLType.NONE;
 
 			default:
 				return ACLType.READ_ONLY;

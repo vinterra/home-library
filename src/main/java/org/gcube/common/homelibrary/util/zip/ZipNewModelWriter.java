@@ -11,6 +11,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.IOUtils;
+import org.gcube.common.homelibrary.home.workspace.folder.items.ExternalFile;
 import org.gcube.common.homelibrary.util.zip.zipmodel.ZipFile;
 import org.gcube.common.homelibrary.util.zip.zipmodel.ZipFolder;
 import org.gcube.common.homelibrary.util.zip.zipmodel.ZipItem;
@@ -21,9 +22,9 @@ import org.slf4j.LoggerFactory;
  * @author Federico De Faveri defaveri@isti.cnr.it
  *
  */
-public class ZipModelWriter {
+public class ZipNewModelWriter {
 
-	protected Logger logger = LoggerFactory.getLogger(ZipModelWriter.class);
+	protected Logger logger = LoggerFactory.getLogger(ZipNewModelWriter.class);
 
 	public File writeItem(ZipItem item, boolean skipRoot) throws IOException
 	{
@@ -38,7 +39,7 @@ public class ZipModelWriter {
 	{
 
 		switch (item.getType()) {
-		
+
 		case FILE: addZipFile(zos, (ZipFile) item, skipRoot); break;
 		case FOLDER: addZipFolder(zos, (ZipFolder) item, skipRoot); break;
 		}
@@ -47,45 +48,32 @@ public class ZipModelWriter {
 	protected void addZipFolder(ZipOutputStream zos, ZipFolder folder, boolean skipRoot) throws IOException
 	{
 
-		if (folder.getChildren().size() == 0) {
-			ZipEntry zipEntry = null;
-			if (skipRoot){
-				String sub = folder.getPath().substring(folder.getPath().indexOf('/') + 1);
-				int start = sub.indexOf('/') + 1;
-				logger.trace("adding ZipFile path: "+ folder.getPath().substring(start));
-				zipEntry = new ZipEntry(folder.getPath().substring(start) + File.separator);
-			}else{
-				logger.trace("adding ZipFile path: "+ folder.getPath());
-				zipEntry = new ZipEntry(folder.getPath() + File.separator);
-			}
-			zos.putNextEntry(zipEntry);
-			zos.closeEntry();
-		}
+//		System.out.println(folder.getPath());	
+		ZipEntry zipEntry = new ZipEntry(folder.getPath() + File.separator);
+		zos.putNextEntry(zipEntry);
+		zos.closeEntry();
 		for (ZipItem item:folder.getChildren()) addZipItem(zos, item, skipRoot); 
+
 	}
 
 	protected void addZipFile(ZipOutputStream zos, ZipFile file, boolean skipRoot) throws IOException
 	{
-	
-		ZipEntry zipEntry = null;
-		if (skipRoot){
-			String sub = file.getPath().substring(file.getPath().indexOf('/') + 1);
-			int start = sub.indexOf('/') + 1;
-			logger.trace("adding ZipFile path: "+ file.getPath().substring(start));
-			zipEntry = new ZipEntry(file.getPath().substring(start));
-		}else{
-			logger.trace("adding ZipFile path: "+file.getPath());
-			zipEntry = new ZipEntry(file.getPath());
-		}
-		zipEntry.setComment(file.getComment());
-		zipEntry.setExtra(file.getExtra());
 
+//		System.out.println(file.getPath());
+
+		ZipEntry zipEntry = new ZipEntry(file.getPath());
 		zos.putNextEntry(zipEntry);
+		try{
+			ExternalFile externalFile = (ExternalFile)file;
+			try (InputStream inputStream = externalFile.getData()) {
+				IOUtils.copy(inputStream, zos);
+			}	
+		} catch (Exception e) {
+			logger.error(file.getName() + " will not be compressed.");
+		}
 
-		InputStream stream = file.getContentStream();
-		IOUtils.copy(stream, zos);
 		zos.closeEntry();
-		stream.close();
 	}
+
 
 }

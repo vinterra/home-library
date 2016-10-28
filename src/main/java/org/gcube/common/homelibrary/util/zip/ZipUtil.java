@@ -122,51 +122,60 @@ public class ZipUtil {
 		return zipWorkspaceItem(ts, skipRoot);
 	}
 
-	
+
 	protected static File zipWorkspaceItem(WorkspaceItem workspaceItem) throws InternalErrorException, IOException
 	{
 		logger.trace("Zipping "+ workspaceItem.getName());
-//		return zipWorkspaceItem(workspaceItem, false);
+		//		return zipWorkspaceItem(workspaceItem, false);
 		File zipFile = File.createTempFile("zippping", "gz");
+			
 		try (ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream(zipFile))) {
 			processFolder(workspaceItem, zipOutputStream,  workspaceItem.getName());
 		}
 		return zipFile;		
 	}
-	
 
 
-/**
- * Simple zip folder
- * @param myFolder
- * @param zipOutputStream
- * @param prefixLength
- * @throws IOException
- * @throws InternalErrorException
- */
+
+	/**
+	 * Simple zip folder
+	 * @param myFolder
+	 * @param zipOutputStream
+	 * @param prefixLength
+	 * @throws IOException
+	 * @throws InternalErrorException
+	 */
 	private static void processFolder(WorkspaceItem myFolder, final ZipOutputStream zipOutputStream, String path)
 			throws IOException, InternalErrorException {
+		
 		for (WorkspaceItem file: myFolder.getChildren()) {
-			if (!file.isFolder()) {
-				final ZipEntry zipEntry = new ZipEntry(path + File.separator + file.getName());
+			ZipEntry zipEntry = null;
+			if (file.isFolder()) {		
+				zipEntry = new ZipEntry(path + File.separator + file.getName() + File.separator);
 				zipOutputStream.putNextEntry(zipEntry);
-				ExternalFile externalFile = (ExternalFile)file;
-				try (InputStream inputStream = externalFile.getData()) {
-					IOUtils.copy(inputStream, zipOutputStream);
-				}
-				zipOutputStream.closeEntry();
+				processFolder(file, zipOutputStream, path + File.separator + file.getName());			
 			} else {
-				processFolder(file, zipOutputStream, path + File.separator + file.getName());
+				zipEntry = new ZipEntry(path + File.separator + file.getName());
+				zipOutputStream.putNextEntry(zipEntry);
+				try{
+					ExternalFile externalFile = (ExternalFile)file;
+					try (InputStream inputStream = externalFile.getData()) {
+						IOUtils.copy(inputStream, zipOutputStream);
+					}	
+				} catch (Exception e) {
+					logger.error(file.getName() + " will not be compressed.");
+				}
 			}
+			zipOutputStream.closeEntry();
 		}
 	}
-	
+
 	protected static File zipWorkspaceItem(WorkspaceItem workspaceItem, boolean skipRoot) throws InternalErrorException, IOException
 	{
 		return zipWorkspaceItem(workspaceItem, skipRoot, new ArrayList<String>());
 	}
-	
-	
+
+
 	protected static File zipWorkspaceItem(WorkspaceItem workspaceItem, boolean skipRoot, List<String> idsToExclude) throws InternalErrorException, IOException
 	{
 		logger.trace("Zipping "+workspaceItem);
@@ -175,8 +184,8 @@ public class ZipUtil {
 		WorkspaceToZipModelConverter zipConverter = new WorkspaceToZipModelConverter();
 		ZipItem item = zipConverter.convert(workspaceItem, idsToExclude);
 
-//		ZipModelVisitor zipModelVisitor = new ZipModelVisitor();
-//		zipModelVisitor.visitItem(item);
+		//		ZipModelVisitor zipModelVisitor = new ZipModelVisitor();
+		//		zipModelVisitor.visitItem(item);
 
 		logger.trace("writing model");
 		ZipModelWriter zipModelWriter = new ZipModelWriter();
@@ -188,15 +197,15 @@ public class ZipUtil {
 
 	protected static File zipWorkspaceItem(List<WorkspaceItem> items, List<String> idsToExclude) throws InternalErrorException, IOException
 	{
-		
+
 		logger.trace("Zipping items: "+items.toString());
 
 		logger.trace("converting to zip model");
 		WorkspaceToZipModelConverter zipConverter = new WorkspaceToZipModelConverter();
 		ZipItem item = zipConverter.convert(items, idsToExclude);
 
-//		ZipModelVisitor zipModelVisitor = new ZipModelVisitor();
-//		zipModelVisitor.visitItem(item);
+		//		ZipModelVisitor zipModelVisitor = new ZipModelVisitor();
+		//		zipModelVisitor.visitItem(item);
 
 		logger.trace("writing model");
 		ZipModelWriter zipModelWriter = new ZipModelWriter();

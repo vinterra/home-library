@@ -67,6 +67,7 @@ src/main/java/org/gcube/common/homelibrary/home/task/TaskState.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/ExternalResourceLinkPlugin.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/Properties.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/Workspace.java -text
+src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceCatalogueItem.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceFolder.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceInternalLink.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/WorkspaceItem.java -text
@@ -185,6 +186,7 @@ src/main/java/org/gcube/common/homelibrary/util/zip/ZipFileModelExtractor.java -
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipModelToWorkspaceCreator.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipModelVisitor.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipModelWriter.java -text
+src/main/java/org/gcube/common/homelibrary/util/zip/ZipNewModelWriter.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/ZipUtil.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/AbstractZipItem.java -text
 src/main/java/org/gcube/common/homelibrary/util/zip/zipmodel/ZipFile.java -text

@@ -40,7 +40,7 @@ public interface WorkspaceCatalogue extends WorkspaceFolder {
 	 */
 	public WorkspaceItem addWorkspaceItem(String workspaceItemID, String destinationFolderID) throws InternalErrorException;
 
-	/**catalogueItemID
+	/**
 	 * Copy item into Catalogue root
 	 * @param workspaceItemID the ID of the workspaceItem to copy
 	 * @return the copied item

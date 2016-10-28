@@ -8,8 +8,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import javax.activation.MimetypesFileTypeMap;
 
 import org.apache.tika.config.TikaConfig;
 import org.apache.tika.detect.Detector;
@@ -195,7 +198,7 @@ public class MimeTypeUtil {
 				Metadata metadata = new Metadata();
 				metadata.add(Metadata.RESOURCE_NAME_KEY, filenameWithExtension);
 				
-				mediaType = detector.detect(stream, metadata);
+				mediaType = detector.detect(stream, metadata);			 
 
 			} catch (IOException e) {
 				logger.error("Error detecting mime type for file " + filenameWithExtension);

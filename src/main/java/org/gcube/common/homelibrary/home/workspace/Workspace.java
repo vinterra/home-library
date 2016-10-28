@@ -5,9 +5,11 @@ package org.gcube.common.homelibrary.home.workspace;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.jcr.RepositoryException;
 
@@ -997,7 +999,25 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws InternalErrorException
 	 */
 	List<WorkspaceItem> getPublicFolders() throws InternalErrorException;
-
-
-
+	
+	/**
+	 * Attach a workspaceItem to a conversation
+	 * @param ConversationId the conversation ID
+	 * @param WorkspaceItemId the Workspace Item ID
+	 * @return public URL to the WorkspaceItem
+	 * @throws InternalErrorException
+	 * @throws ItemNotFoundException 
+	 * @throws ItemAlreadyExistException 
+	 * @throws InsufficientPrivilegesException 
+	 */
+	URL attachToConversation(UUID ConversationId, String WorkspaceItemId) throws InternalErrorException, ItemNotFoundException, InsufficientPrivilegesException, ItemAlreadyExistException;
+	
+	/**
+	 * Delete all conversation attachments by convesation ID
+	 * @param ConversationId the conversation ID
+	 * @return true if all conversation attachments have been deleted, false otherwise 
+	 * @throws ItemNotFoundException 
+	 * @throws InternalErrorException 
+	 */
+	boolean deleteAllConversationAttachments(UUID ConversationId) throws InternalErrorException, ItemNotFoundException;
 }
