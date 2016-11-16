@@ -263,6 +263,7 @@ public class WorkspaceTreeVisitor extends IndentedVisitor {
 	 */
 	protected void visitItem(WorkspaceItem item) throws InternalErrorException
 	{
+//System.out.println(item.getPath());
 		switch (item.getType()) {
 			case FOLDER: println("/["+item.getName()+"]"); break;
 			case FOLDER_ITEM: println("/"+item.getName()); break;

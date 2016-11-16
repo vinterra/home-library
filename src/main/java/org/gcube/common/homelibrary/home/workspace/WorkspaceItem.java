@@ -3,6 +3,7 @@
  */
 package org.gcube.common.homelibrary.home.workspace;
 
+import java.io.InputStream;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +20,7 @@ import org.gcube.common.homelibrary.home.workspace.accounting.AccountingEntryRea
 import org.gcube.common.homelibrary.home.workspace.acl.Capabilities;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.ItemAlreadyExistException;
+import org.gcube.common.homelibrary.home.workspace.exceptions.ItemNotFoundException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.WrongDestinationException;
 
 /**
@@ -266,12 +268,12 @@ public interface WorkspaceItem {
 	 */
 	public String getPublicLink(boolean shortUrl) throws InternalErrorException;
 
-	/**
-	 * Get a storageId
-	 * @return storageId
-	 * @throws InternalErrorException
-	 */
-	public String getStorageID() throws InternalErrorException;
+//	/**
+//	 * Get a storageId
+//	 * @return storageId
+//	 * @throws InternalErrorException
+//	 */
+//	public String getStorageID() throws InternalErrorException;
 
 
 	/**
@@ -304,6 +306,15 @@ public interface WorkspaceItem {
 	 * @throws InternalErrorException
 	 */
 	public Map<ACLType, List<String>> getACLOwner() throws InternalErrorException;
+
+	/**
+	 * @param fileData
+	 * @throws InternalErrorException
+	 * @throws InsufficientPrivilegesException
+	 * @throws ItemNotFoundException
+	 */
+	void updateItem(InputStream fileData)
+			throws InternalErrorException, InsufficientPrivilegesException, ItemNotFoundException;
 
 
 

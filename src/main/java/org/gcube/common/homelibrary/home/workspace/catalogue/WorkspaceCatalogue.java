@@ -8,6 +8,7 @@ import java.util.List;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.WorkspaceFolder;
 import org.gcube.common.homelibrary.home.workspace.WorkspaceItem;
+import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 
 /**
  * @author valentina
@@ -20,16 +21,18 @@ public interface WorkspaceCatalogue extends WorkspaceFolder {
 	 * @param id the ID of a catalogue item
 	 * @return a catalogue item
 	 * @throws InternalErrorException
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public WorkspaceItem getCatalogueItem(String id) throws InternalErrorException;
+	public WorkspaceItem getCatalogueItem(String id) throws InternalErrorException, InsufficientPrivilegesException;
 	
 	/**
 	 * Retrieve a catalogue item by relative path
 	 * @param path the relative path of a catalogue item
 	 * @return a catalogue item
 	 * @throws InternalErrorException
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public WorkspaceItem getCatalogueItemByPath(String path) throws InternalErrorException;
+	public WorkspaceItem getCatalogueItemByPath(String path) throws InternalErrorException, InsufficientPrivilegesException;
 	
 	/**
 	 * Copy item into Catalogue Folder

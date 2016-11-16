@@ -486,16 +486,18 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @param itemId the item id.
 	 * @return the item.
 	 * @throws ItemNotFoundException if the item has not been found.
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public WorkspaceItem getItem(String itemId) throws ItemNotFoundException;
+	public WorkspaceItem getItem(String itemId) throws ItemNotFoundException, InsufficientPrivilegesException;
 
 	/**
 	 * Return the item with the specified path.
 	 * @param path the item path.
 	 * @return the item.
 	 * @throws ItemNotFoundException if the item has not been found.
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public WorkspaceItem getItemByPath(String path) throws ItemNotFoundException;
+	public WorkspaceItem getItemByPath(String path) throws ItemNotFoundException, InsufficientPrivilegesException;
 	/**
 	 * Return all capabilities associated with the item.
 	 * @param itemId the item to retrieve.

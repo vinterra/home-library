@@ -38,9 +38,28 @@ public class UnzipUtil {
 	 * @param zipName the zip name.
 	 * @throws IOException if an error occurs.
 	 */
-	public static void unzip(WorkspaceFolder destinationFolder, InputStream is, String zipName) throws InternalErrorException
+	public static WorkspaceFolder unzip(WorkspaceFolder destinationFolder, InputStream is, String zipName) throws InternalErrorException
 	{
-		logger.trace("unzip destinationWorkspace: "+destinationFolder+", zipName: "+zipName);
+		return unzip(destinationFolder, is, zipName, false);
+	}
+
+	/**
+	 * @param parent
+	 * @param inputStream
+	 * @param name
+	 * @param replace
+	 * @return 
+	 * @throws InternalErrorException 
+	 */
+	public static WorkspaceFolder unzip(WorkspaceFolder destinationFolder, InputStream is, String zipName, boolean replace) throws InternalErrorException {
+
+		return unzip(destinationFolder, is, zipName, replace, false);
+		
+	}
+	
+	
+	public static WorkspaceFolder unzip(WorkspaceFolder destinationFolder, InputStream is, String zipName, boolean replace, boolean hardreplace) throws InternalErrorException {
+		logger.info("unzip destinationWorkspace: "+destinationFolder+", zipName: "+zipName+", replace: "+ replace);
 
 		logger.trace("Extracting zip model from zip file.");
 		ZipFileModelExtractor zme = new ZipFileModelExtractor(is);
@@ -56,10 +75,10 @@ public class UnzipUtil {
 //		visitor.visit(items);
 
 		logger.trace("Creating the items");
-		ZipModelToWorkspaceCreator creator = new ZipModelToWorkspaceCreator();
-		creator.create(destinationFolder, items);
+		ZipModelToWorkspaceCreator creator = new ZipModelToWorkspaceCreator(replace, hardreplace);
+		WorkspaceFolder folder = creator.create(destinationFolder, items);
+		return folder;
 	}
-
 
 	public static void unzip(WorkspaceFolder destinationFolder, String zipPath) throws IOException, InternalErrorException
 	{
@@ -136,6 +155,9 @@ public class UnzipUtil {
 
 		throw new Exception("No file entry found");
 	}
+
+
+
 
 
 

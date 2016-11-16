@@ -45,6 +45,7 @@ public class HomeLibraryVisitor extends IndentedVisitor {
 		reset();
 		List<String> scopes = factory.listScopes();
 		for (String scope : scopes) {
+		
 			println(scope);
 			HomeManager homeManager = factory.getHomeManager();
 			visitHomeManager(homeManager);
@@ -56,6 +57,7 @@ public class HomeLibraryVisitor extends IndentedVisitor {
 		List<User> users = homeManager.getUsers();
 
 		for (User user : users) {
+		
 			println(user.getPortalLogin());
 			if (visitHomes) {
 				Home home = homeManager.getHome(user);

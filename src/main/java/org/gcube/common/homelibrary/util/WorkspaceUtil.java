@@ -3,6 +3,7 @@
  */
 package org.gcube.common.homelibrary.util;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -15,6 +16,7 @@ import org.gcube.common.homelibrary.home.workspace.WorkspaceItem;
 import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.ItemAlreadyExistException;
+import org.gcube.common.homelibrary.home.workspace.exceptions.ItemNotFoundException;
 import org.gcube.common.homelibrary.home.workspace.folder.FolderItem;
 import org.gcube.common.homelibrary.home.workspace.usermanager.GCubeGroup;
 import org.gcube.common.homelibrary.home.workspace.usermanager.UserManager;
@@ -214,6 +216,7 @@ public class WorkspaceUtil {
 	 */
 	public static FolderItem createExternalFile(WorkspaceFolder destinationFolder, String name, String description, String mimeType, InputStream is) throws InsufficientPrivilegesException, InternalErrorException, ItemAlreadyExistException, IOException
 	{	
+
 		return destinationFolder.createExternalGenericItem(name, description, is, null, mimeType, 0);
 	}
 
@@ -309,6 +312,29 @@ public class WorkspaceUtil {
 		}
 
 		return members;
+	}
+
+
+//	/**
+//	 * @param folder
+//	 * @param zipItemName
+//	 * @param fileInputStream
+//	 * @return
+//	 * @throws InternalErrorException 
+//	 * @throws ItemNotFoundException 
+//	 * @throws InsufficientPrivilegesException 
+//	 */
+//	public static void overwrite(WorkspaceFolder folder, String zipItemName, FileInputStream fileInputStream) throws InternalErrorException, InsufficientPrivilegesException, ItemNotFoundException {
+//		folder.updateItem(zipItemName, fileInputStream);
+//	}
+
+
+	/**
+	 * @param item
+	 * @param fileInputStream
+	 */
+	public static void overwrite(WorkspaceItem item, FileInputStream fileInputStream)throws InternalErrorException, InsufficientPrivilegesException, ItemNotFoundException {
+		item.updateItem(fileInputStream);
 	}
 
 
