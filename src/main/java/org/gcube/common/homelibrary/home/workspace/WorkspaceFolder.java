@@ -35,7 +35,14 @@ import org.gcube.common.homelibrary.home.workspace.folder.items.ts.TimeSeries;
  */
 public interface WorkspaceFolder extends WorkspaceItem {
 	
-	
+	/**
+	 * Get children of the current folder
+	 * @param showHidden: true to include hidden folders; false otherwise.
+	 * @return a list of children including MySpecialFolder
+	 * @throws InternalErrorException if an error occurs.
+	 */
+	public List<WorkspaceItem> getAllChildren(boolean showHidden) throws InternalErrorException;
+
 	
 	/**
 	 * Get children of the current folder
@@ -509,6 +516,8 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 * @throws InternalErrorException 
 	 */
 	public String getUniqueName(String initialName, boolean copy) throws InternalErrorException;
+
+
 	
 	
 }

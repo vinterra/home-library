@@ -158,4 +158,19 @@
 		<Change>Feature #5092: Add public access to history;</Change>
 		<Change>Feature #4186: Added support to catalogue;</Change>
 	</Changeset>
+<Changeset component="org.gcube.common.home-library.2-6-0"
+			date="2016-11-23">
+		<Change>Feature #5406: HomeLibrary: add support for conversation
+			attachments;
+		</Change>
+		<Change>Task #5623: HL Rest API: add a method to download a folder in
+			zip format;
+		</Change>
+		<Change>Task #5716: HL Rest API: add a method to upload a zip file;
+		</Change>
+		<Change>Task #5723: HL Rest API: add a method to get the public URL of
+			a file;</Change>
+		<Change>Task #5831: HL Rest API: add MySpecialFolder (VRE Folders) to
+			list servlet;</Change>
+	</Changeset>
 </ReleaseNotes>
