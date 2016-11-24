@@ -59,7 +59,7 @@ public class UnzipUtil {
 	
 	
 	public static WorkspaceFolder unzip(WorkspaceFolder destinationFolder, InputStream is, String zipName, boolean replace, boolean hardreplace) throws InternalErrorException {
-		logger.info("unzip destinationWorkspace: "+destinationFolder+", zipName: "+zipName+", replace: "+ replace);
+		logger.debug("unzip destinationWorkspace: "+destinationFolder+", zipName: "+zipName+", replace: "+ replace);
 
 		logger.trace("Extracting zip model from zip file.");
 		ZipFileModelExtractor zme = new ZipFileModelExtractor(is);

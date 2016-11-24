@@ -268,12 +268,12 @@ public interface WorkspaceItem {
 	 */
 	public String getPublicLink(boolean shortUrl) throws InternalErrorException;
 
-//	/**
-//	 * Get a storageId
-//	 * @return storageId
-//	 * @throws InternalErrorException
-//	 */
-//	public String getStorageID() throws InternalErrorException;
+	/**
+	 * Get a storageId
+	 * @return storageId
+	 * @throws InternalErrorException
+	 */
+	public String getStorageID() throws InternalErrorException;
 
 
 	/**
