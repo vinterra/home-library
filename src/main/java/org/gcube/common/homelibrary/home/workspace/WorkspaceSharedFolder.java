@@ -6,6 +6,7 @@ package org.gcube.common.homelibrary.home.workspace;
 import java.util.List;
 
 import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
+import org.gcube.common.homelibrary.home.workspace.catalogue.WorkspaceVRECatalogue;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.WrongDestinationException;
@@ -87,15 +88,6 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	public String getName(String user) throws InternalErrorException;
 
 	/**
-	 * Set ACLs on shared folder
-	 * @param users
-	 * @param privilege
-	 * @throws InternalErrorException
-	 */
-	void setACL(List<String> users, ACLType privilege)
-			throws InternalErrorException;
-
-	/**
 	 * @return true if the shared folder is a VRE folder
 	 */
 	boolean isVreFolder();
@@ -133,9 +125,12 @@ public interface WorkspaceSharedFolder extends WorkspaceFolder{
 	public List<String> getGroups() throws InternalErrorException;
 
 
-	public WorkspaceSharedFolder share(List<String> users) throws InsufficientPrivilegesException,
-	WrongDestinationException, InternalErrorException;
-
+	/**
+	 * Get VRE Cataloge
+	 * @return VRE Cataloge
+	 * @throws InternalErrorException
+	 */
+	public WorkspaceVRECatalogue getVRECatalogue() throws InternalErrorException;
 
 
 

@@ -73,7 +73,7 @@ public class HomeLibraryConfiguration {
 	 */
 	public String getPersistenceFolder() throws InternalErrorException
 	{
-		logger.info("calculating the persistence folder");
+		logger.debug("calculating the persistence folder");
 
 		String persistenceFolder = null;
 
@@ -94,13 +94,13 @@ public class HomeLibraryConfiguration {
 			} else if (System.getProperties().containsKey("catalina.base")) {
 				//BASE DIR calculated from catalina.base property
 				String catalinaBase = System.getProperty("catalina.base");
-				logger.info("Using catalina.base property "+catalinaBase);
+				logger.debug("Using catalina.base property "+catalinaBase);
 				baseDir = catalinaBase+File.separator+"webapps"+File.separator+"usersArea";
 				
 			}else{
 				//using TMP dir as BASE DIR
 				String tmpDir = System.getProperty("java.io.tmpdir");
-				logger.info("Using tmp dir "+tmpDir);
+				logger.debug("Using tmp dir "+tmpDir);
 				baseDir = tmpDir;
 			}
 
