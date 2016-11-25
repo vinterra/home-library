@@ -95,7 +95,6 @@ src/main/java/org/gcube/common/homelibrary/home/workspace/acl/Capabilities.java 
 src/main/java/org/gcube/common/homelibrary/home/workspace/acl/Capability.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/acl/Operation.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/catalogue/WorkspaceCatalogue.java -text
-src/main/java/org/gcube/common/homelibrary/home/workspace/catalogue/WorkspaceVRECatalogue.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/events/AbstractWorkspaceEventSource.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/events/WorkspaceEvent.java -text
 src/main/java/org/gcube/common/homelibrary/home/workspace/events/WorkspaceEventImpl.java -text
@@ -225,3 +224,4 @@ src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementData.java
 src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementGraphGenerator.java -text
 src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementSession.java -text
 src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementSessionFactory.java -text
+target/profile.xml -text
