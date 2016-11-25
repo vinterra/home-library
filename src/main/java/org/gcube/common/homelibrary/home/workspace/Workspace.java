@@ -488,7 +488,7 @@ public interface Workspace extends WorkspaceEventSource {
 	 * @throws ItemNotFoundException if the item has not been found.
 	 * @throws InsufficientPrivilegesException 
 	 */
-	public WorkspaceItem getItem(String itemId) throws ItemNotFoundException, InsufficientPrivilegesException;
+	public WorkspaceItem getItem(String itemId) throws ItemNotFoundException;
 
 	/**
 	 * Return the item with the specified path.

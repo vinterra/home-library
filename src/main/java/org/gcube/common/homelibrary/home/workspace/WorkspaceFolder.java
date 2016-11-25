@@ -14,7 +14,6 @@ import org.gcube.common.homelibrary.home.workspace.accessmanager.ACLType;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.ItemAlreadyExistException;
-import org.gcube.common.homelibrary.home.workspace.exceptions.ItemNotFoundException;
 import org.gcube.common.homelibrary.home.workspace.exceptions.WrongDestinationException;
 import org.gcube.common.homelibrary.home.workspace.folder.FolderBulkCreator;
 import org.gcube.common.homelibrary.home.workspace.folder.FolderItem;
@@ -516,6 +515,8 @@ public interface WorkspaceFolder extends WorkspaceItem {
 	 * @throws InternalErrorException 
 	 */
 	public String getUniqueName(String initialName, boolean copy) throws InternalErrorException;
+
+
 
 
 	
