@@ -225,4 +225,3 @@ src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementData.java
 src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementGraphGenerator.java -text
 src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementSession.java -text
 src/test/java/org/gcube/common/homelibrary/performance/tool/MeasurementSessionFactory.java -text
-target/profile.xml -text
