@@ -140,9 +140,9 @@
 		<Change>Feature #2458: HL: add mime type to MimeTypeUtil ;
 		</Change>
 	</Changeset>
-		<Changeset component="org.gcube.common.home-library.2-4-0"
+	<Changeset component="org.gcube.common.home-library.2-4-0"
 		date="2016-06-23">
-			<Change>Bug #4139: Cannot obtain public URL for shared folders;
+		<Change>Bug #4139: Cannot obtain public URL for shared folders;
 		</Change>
 		<Change>Feature #4219: Use storage ID to download files from storage;
 		</Change>
@@ -150,16 +150,17 @@
 		<Change>Feature #4216: Set a folder as System Folder;</Change>
 		<Change>Feature #4186: HL: Add time to live to cache;</Change>
 	</Changeset>
-			<Changeset component="org.gcube.common.home-library.2-5-0"
+	<Changeset component="org.gcube.common.home-library.2-5-0"
 		date="2016-09-30">
 		<Change>Feature #3782: Adde guest user;
 		</Change>
-		<Change>Feature #5093: Show public folders in a special folders;</Change>
+		<Change>Feature #5093: Show public folders in a special folders;
+		</Change>
 		<Change>Feature #5092: Add public access to history;</Change>
 		<Change>Feature #4186: Added support to catalogue;</Change>
 	</Changeset>
-<Changeset component="org.gcube.common.home-library.2-6-0"
-			date="2016-11-23">
+	<Changeset component="org.gcube.common.home-library.2-6-0"
+		date="2016-11-23">
 		<Change>Feature #5406: HomeLibrary: add support for conversation
 			attachments;
 		</Change>
@@ -169,8 +170,19 @@
 		<Change>Task #5716: HL Rest API: add a method to upload a zip file;
 		</Change>
 		<Change>Task #5723: HL Rest API: add a method to get the public URL of
-			a file;</Change>
+			a file;
+		</Change>
 		<Change>Task #5831: HL Rest API: add MySpecialFolder (VRE Folders) to
-			list servlet;</Change>
+			list servlet;
+		</Change>
+		<Change>Task #6041: Home Library: add a "catalogue" area for VRE
+			folder
+		</Change>
+		<Change>Feature #6074: HL: add Insufficient Privileges Exception to
+			setPublic method
+		</Change>
+		<Change>Bug #6075: HL: check if user has the rights to access all
+			Public Folders
+		</Change>
 	</Changeset>
 </ReleaseNotes>
