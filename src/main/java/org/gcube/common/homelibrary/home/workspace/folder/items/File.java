@@ -4,7 +4,6 @@
 package org.gcube.common.homelibrary.home.workspace.folder.items;
 
 import java.io.InputStream;
-
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 
 /**
@@ -60,6 +59,8 @@ public interface File {
 	 * @return the storage ID
 	 */
 	public String getStorageId() throws InternalErrorException;
+
+
 
 
 

@@ -308,6 +308,7 @@ public interface WorkspaceItem {
 	public Map<ACLType, List<String>> getACLOwner() throws InternalErrorException;
 
 	/**
+	 * Update item
 	 * @param fileData
 	 * @throws InternalErrorException
 	 * @throws InsufficientPrivilegesException
@@ -316,7 +317,18 @@ public interface WorkspaceItem {
 	void updateItem(InputStream fileData)
 			throws InternalErrorException, InsufficientPrivilegesException, ItemNotFoundException;
 
-
-
+//	/**
+//	 * Get Versioning
+//	 * @return a list of versions
+//	 * @throws InternalErrorException
+//	 */
+//	public List<String> getVersioning() throws InternalErrorException;
+//
+//	/**
+//	 * Restore Version
+//	 * @param version a version to restore
+//	 * @throws InternalErrorException
+//	 */
+//	public void restoreVersion(String version) throws InternalErrorException;
 
 }
