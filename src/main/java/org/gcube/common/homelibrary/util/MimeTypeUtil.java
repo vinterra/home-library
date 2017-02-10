@@ -8,11 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import javax.activation.MimetypesFileTypeMap;
 
 import org.apache.tika.config.TikaConfig;
 import org.apache.tika.detect.Detector;
@@ -53,11 +50,6 @@ public class MimeTypeUtil {
 	protected static final Map<String, String> extension_mimetype_map = new LinkedHashMap<String, String>();
 
 	static{
-		//		MimeUtil.registerMimeDetector("eu.medsea.mimeutil.detector.MagicMimeMimeDetector");
-		//		MimeUtil.registerMimeDetector("eu.medsea.mimeutil.detector.ExtensionMimeDetector"); 
-		//		MimeUtil.registerMimeDetector("eu.medsea.mimeutil.detector.OpendesktopMimeDetector");
-
-		//		InputStream mapFile = MimeTypeUtil.class.getResourceAsStream("/org/gcube/portlets/user/homelibrary/util/resources/MimeTypeToExtensionMap.properties");
 		InputStream extensionToMimetype = MimeTypeUtil.class.getResourceAsStream(
 				"/ExtensionToMimeTypeMap.properties");
 		InputStream mimetypeToExtension = MimeTypeUtil.class.getResourceAsStream(

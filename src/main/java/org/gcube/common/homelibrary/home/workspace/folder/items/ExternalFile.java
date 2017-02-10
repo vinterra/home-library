@@ -10,7 +10,7 @@ import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
 import org.gcube.common.homelibrary.home.workspace.folder.FolderItem;
 
 /**
- * @author Federico De Faveri defaveri@isti.cnr.it
+ * @author Valentina Marioli valentina.marioli@isti.cnr.it
  *
  */
 public interface ExternalFile extends FolderItem, File {
@@ -26,7 +26,7 @@ public interface ExternalFile extends FolderItem, File {
 	 * @return a list of versions
 	 * @throws InternalErrorException
 	 */
-	public List<String> getVersioning() throws InternalErrorException;
+	public List<String> getVersionHistory() throws InternalErrorException;
 
 	/**
 	 * Restore a version
@@ -35,4 +35,25 @@ public interface ExternalFile extends FolderItem, File {
 	 */
 	public void restoreVersion(String version) throws InternalErrorException;
 
+	
+	/**
+	 * Remove a version
+	 * @param version a previous version 
+	 * @throws InternalErrorException
+	 */
+	public void removeVersion(String version) throws InternalErrorException;
+	
+	/**
+	 * Get Current version
+	 * @return the current version
+	 * @throws InternalErrorException
+	 */
+	public String getVersion() throws InternalErrorException;
+	
+	/**
+	 * Get a previous version
+	 * @return the current version
+	 * @throws InternalErrorException
+	 */
+	public InputStream downloadVersion(String version) throws InternalErrorException;
 }
