@@ -185,4 +185,11 @@
 			Public Folders
 		</Change>
 	</Changeset>
+	<Changeset component="org.gcube.common.home-library.2.7.0"
+		date="2017-02-13">
+		<Change>Task #5156: Home Library should support versioning;
+		</Change>
+		<Change>Task #7007: Add features to HL versioning;
+		</Change>
+	</Changeset>
 </ReleaseNotes>

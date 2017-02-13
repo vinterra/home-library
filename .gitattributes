@@ -12,10 +12,8 @@
 .settings/org.eclipse.wst.common.project.facet.core.xml -text
 .settings/org.eclipse.wst.validation.prefs -text
 .settings/org.maven.ide.eclipse.prefs -text
-distro/CHANGELOG -text
 distro/INSTALL -text
 distro/LICENSE -text
-distro/MAINTAINERS -text
 distro/README -text
 distro/changelog.xml -text
 distro/descriptor.xml -text
