@@ -20,6 +20,8 @@ public interface AccountingEntry {
 	Calendar getDate();
 	
 	AccountingEntryType getEntryType();
+	
+	String getVersion();
 
 
 }

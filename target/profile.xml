@@ -10,14 +10,14 @@
 		<Packages>
 			<Software>
 				<Name>home-library</Name>
-				<Version>2.6.0-SNAPSHOT</Version>
+				<Version>2.7.0-SNAPSHOT</Version>
 				<MavenCoordinates>
 					<groupId>org.gcube.common</groupId>
 					<artifactId>home-library</artifactId>
-					<version>2.6.0-SNAPSHOT</version>
+					<version>2.7.0-SNAPSHOT</version>
 				</MavenCoordinates>
 				<Files>
-					<File>home-library-2.6.0-SNAPSHOT.jar</File>
+					<File>home-library-2.7.0-SNAPSHOT.jar</File>
 				</Files>
 			</Software>
 		</Packages>
