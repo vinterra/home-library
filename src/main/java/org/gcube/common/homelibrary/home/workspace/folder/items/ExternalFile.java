@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.gcube.common.homelibary.model.versioning.WorkspaceVersion;
 import org.gcube.common.homelibrary.home.exceptions.InternalErrorException;
+import org.gcube.common.homelibrary.home.workspace.exceptions.InsufficientPrivilegesException;
 import org.gcube.common.homelibrary.home.workspace.folder.FolderItem;
 
 /**
@@ -33,23 +34,26 @@ public interface ExternalFile extends FolderItem, File {
 	 * Restore a version
 	 * @param version a previous version 
 	 * @throws InternalErrorException
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public void restoreVersion(String version) throws InternalErrorException;
+	public void restoreVersion(String version) throws InternalErrorException, InsufficientPrivilegesException;
 
 	
 	/**
 	 * Remove a version
 	 * @param version a previous version 
 	 * @throws InternalErrorException
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public void removeVersion(String version) throws InternalErrorException;
+	public void removeVersion(String version) throws InternalErrorException, InsufficientPrivilegesException;
 	
 	/**
 	 * Remove a list of versions
 	 * @param versions a list of versions
 	 * @throws InternalErrorException
+	 * @throws InsufficientPrivilegesException 
 	 */
-	public void removeVersions(List<String> versions) throws InternalErrorException;
+	public void removeVersions(List<String> versions) throws InternalErrorException, InsufficientPrivilegesException;
 	
 	/**
 	 * Get Current version
